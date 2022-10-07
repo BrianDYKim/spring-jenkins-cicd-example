@@ -14,4 +14,6 @@ class HelloController {
 
     @GetMapping("/hello1")
     fun hello1(): String = "first hello!!"
+
+
 }
