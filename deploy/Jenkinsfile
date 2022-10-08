@@ -21,7 +21,7 @@ pipeline {
             steps {
                 dir("${env.WORKSPACE}") {
                     sh 'docker build -t ${NAME} .'
-                    sh 'docker tag ${NAME}:latest ${ECR_REPO}/${NAME}:latest'
+                    sh 'docker tag ${NAME}:latest ${ECR_REPO}:latest'
                 }
             }
         }
