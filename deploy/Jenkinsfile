@@ -1,12 +1,20 @@
 pipeline {
     agent any
 
+    environment {
+        ECR_REPO = "326991552997.dkr.ecr.ap-northeast-2.amazonaws.com/test-cicd"
+        AWS_CREDENTIALS = "jenkins_deploy_user_credentials"
+        NAME = "test"
+    }
+
     stages {
-        stage("========== Build Docker Image ==========") {
+        stage("========== Build the project ==========") {
             steps {
-                echo "Docker Build!"
+                dir("${env.WORKSPACE}") {
+                    sh 'chmod 755 ./gradlew'
+                    sh './gradlew build'
+                }
             }
         }
     }
-
 }

@@ -1,1 +1,1 @@
-rootProject.name = "spring-jenkins-cicd-example"
+rootProject.name = "example"
