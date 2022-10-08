@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 class HelloController {
 
     @GetMapping("/hello1")
-    fun hello1(): String = "first hello!!"
+    fun hello1(): String = "first hello!!!"
 
 
 }
