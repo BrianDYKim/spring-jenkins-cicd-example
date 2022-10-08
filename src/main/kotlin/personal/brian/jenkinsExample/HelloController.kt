@@ -15,5 +15,6 @@ class HelloController {
     @GetMapping("/hello1")
     fun hello1(): String = "first hello!!"
 
-
+    @GetMapping("/hello2")
+    fun hello2(): String = "second hello!!"
 }

@@ -72,10 +72,10 @@ pipeline {
 
             post {
                 success {
-                    echo "The ECR Upload stage is done successfully."
+                    echo "The Fargate deploy stage is done successfully."
                 }
                 failure {
-                    echo "The ECR Upload stage is fail."
+                    echo "The Fargate deploy stage is fail."
                 }
             }
         }
