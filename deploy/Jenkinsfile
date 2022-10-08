@@ -11,11 +11,20 @@ pipeline {
     }
 
     stages {
-        stage("========== Build the project ==========") {
+        stage("========== Test the project ==========") {
             steps {
                 dir("${env.WORKSPACE}") {
                     sh 'chmod 755 ./gradlew'
-                    sh './gradlew build'
+                    sh './gradlew clean test'
+                }
+            }
+        }
+
+
+        stage("========== Build the project ==========") {
+            steps {
+                dir("${env.WORKSPACE}") {
+                    sh './gradlew clean build'
                 }
             }
         }
